@@ -12,7 +12,7 @@ class ControladorLibro {
             res.json(libros)
         }
         catch(error) {
-            res.status(400).send(`Error al intentar obtener los libros... ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -23,7 +23,7 @@ class ControladorLibro {
             res.json(libros)
         }
         catch(error) {
-            res.status(400).send(`Error al intentar obtener los libros... ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -33,7 +33,7 @@ class ControladorLibro {
             const libro = await this.servicioLibro.altaLibro(body);
             res.json(libro);
         } catch(error) {
-            res.status(400).send(`Error al intentar dar de alta un libro: ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -43,7 +43,7 @@ class ControladorLibro {
             const libroBaja = await this.servicioLibro.bajaLibro(codigo);
             res.json(libroBaja);
         } catch(error) {
-            res.status(400).send(`Error al intentar dar de baja un libro: ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -53,7 +53,7 @@ class ControladorLibro {
             const libroAlquilado = await this.servicioLibro.alquilarLibro(codigo);
             res.json(libroAlquilado);
         } catch(error) {
-            res.status(400).send(`Error al intentar alquilar un libro: ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -63,7 +63,7 @@ class ControladorLibro {
             const libroDevuelto = await this.servicioLibro.devolverLibro(codigo);
             res.json(libroDevuelto);
         } catch(error) {
-            res.status(400).send(`Error al intentar devolver un libro: ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 
@@ -73,7 +73,7 @@ class ControladorLibro {
             const libroNoApto = await this.servicioLibro.noAptoLibro(codigo);
             res.json(libroNoApto);
         } catch(error) {
-            res.status(400).send(`Error al intentar marcar un libro como no apto: ${error}`);
+            res.status(400).json({ errorMsg: error.message }); 
         }
     }
 }
