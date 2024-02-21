@@ -1,0 +1,20 @@
+[
+	{
+		"codigo": "1",
+		"titulo": "Nicolas Testa",
+		"autor": "Nicolas Testa",
+		"estado": "alquilado"
+	},
+	{
+		"codigo": "2",
+		"titulo": "Nicolas Testa",
+		"autor": "Nicolas Testa",
+		"estado": "alquilado"
+	},
+	{
+		"codigo": "3",
+		"titulo": "Nicolas Testa",
+		"autor": "Nicolas Testa",
+		"estado": "disponible"
+	}
+]
